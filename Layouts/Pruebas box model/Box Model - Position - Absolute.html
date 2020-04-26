@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+    html{
+    padding: 100px;
+    background-color: rgb(35, 182, 99,0.7); 
+    }
+
+    body{
+        width: 100%;
+        min-height: 100vh;
+        background:rgba(240, 6, 92, 0.7);
+         /*position: relative;  /* con esta instruccion hacemos que el objeto se convierta en referencia de los objetos absolute*/
+    }
+
+        section {
+            border: 1px dashed blue;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            position: static;
+        }
+
+        div {
+            background-color: rgba(173, 216, 230, .7);
+            text-align: center;
+            height: 5em;
+        }
+
+        .PosicionAbsoluta {
+            position: absolute;
+            top: 0px; 
+            left: 0px;
+        }
+    /*Aqui demuestro que las etiquetas no son sentitive case*/
+        mInUmEro {
+            font-size: 45px;
+            border: 1px solid yellow;
+            line-height: 1.7;
+        }
+    </style>
+
+
+
+
+</head>
+
+<body>
+<strong>Consideraciones:</strong>
+<br>
+-La posicion absoluta, no conserva el espacio reservado en el flujo de la hoja.
+<br>
+-Los elementos con posicion (relative, absolute, fixed) se consideran posicionados.
+<br>
+-Cuando se declara el objeto absolute pero no se asignan top ni left este
+se posiciona en la cordenada izquierda superio del padre. Sin embargo si
+el padre no esta posicionado y asi sucesivamente la referencia para top, left, rigth y bottom 
+sera la hoja html.
+<br>
+-Es importante hacer un reinicio básico de los elementos. padding=0 y margin=0
+<br>
+-En el caso la posicion "absolute" no se ereserva el espacion en el flujo de la hoja y se referencia en el primer ancestro posicionado
+si ninguno esta posicionado entoces tomara como referencia la hoja html. 
+<br>
+-Notese que la hoja html esta en verde y que el body esta en tono rosado.
+<hr>
+    <section>
+        <div class="PosicionAbsoluta">
+            <miNumero>1</miNumero>
+        </div>
+    </section>
+</body>
+
+</html>

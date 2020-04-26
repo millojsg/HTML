@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /*por defecto los navegadores tienen sus 
+    propias hojas de estilos que agregan separacion
+    de los elementos por eso el codigo de abajo */
+    *{
+        padding: 0px;
+        margin: 0px;
+    }
+
+    #izq {
+      display: inline;
+      background-color: Yellow; 
+    
+    }
+
+    #der{
+        display: inline;
+        background: blue;
+ 
+    }
+
+    /*Si no se modifica el h1 al tener sus propia
+    hoja de estilos esta es en bloque entonces no
+    se comporta como se desea*/
+    h1 {
+        display: inherit;
+    }
+
+
+
+</style>
+
+</head>
+<body>
+    <div id="izq" class="izquieda"><h1>LADO IZQUIERDO</h1></div> <div id="der">LADO DERECHO</div>    
+    
+
+
+
+
+
+</body>
+</html>
